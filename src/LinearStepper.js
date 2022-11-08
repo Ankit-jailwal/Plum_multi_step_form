@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import "./LinearStepper.css";
 import { makeStyles } from "@material-ui/core/styles";
+import AmountSlider from "./AmountSlider";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -95,33 +96,7 @@ function getStepContent(step) {
     case 1:
       return (
         <>
-          <TextField
-            id="email"
-            label="E-mail"
-            variant="outlined"
-            placeholder="Enter Your E-mail Address"
-            fullWidth
-            margin="normal"
-            name="emailAddress"
-          />
-          <TextField
-            id="phone-number"
-            label="Phone Number"
-            variant="outlined"
-            placeholder="Enter Your Phone Number"
-            fullWidth
-            margin="normal"
-            name="phoneNumber"
-          />
-          <TextField
-            id="alternate-phone"
-            label="Alternate Phone"
-            variant="outlined"
-            placeholder="Enter Your Alternate Phone"
-            fullWidth
-            margin="normal"
-            name="alternatePhone"
-          />
+          <AmountSlider/>
         </>
       );
     case 2:
