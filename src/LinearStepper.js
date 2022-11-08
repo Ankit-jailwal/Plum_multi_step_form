@@ -10,6 +10,7 @@ import {
 import "./LinearStepper.css";
 import { makeStyles } from "@material-ui/core/styles";
 import AmountSlider from "./AmountSlider";
+import Declaration from "./Declaration";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -134,33 +135,7 @@ function getStepContent(step) {
     case 3:
       return (
         <>
-          <TextField
-            id="cardNumber"
-            label="Card Number"
-            variant="outlined"
-            placeholder="Enter Your Card Number"
-            fullWidth
-            margin="normal"
-            name="cardNumber"
-          />
-          <TextField
-            id="cardMonth"
-            label="Card Month"
-            variant="outlined"
-            placeholder="Enter Your Card Month"
-            fullWidth
-            margin="normal"
-            name="cardMonth"
-          />
-          <TextField
-            id="cardYear"
-            label="Card Year"
-            variant="outlined"
-            placeholder="Enter Your Card Year"
-            fullWidth
-            margin="normal"
-            name="cardYear"
-          />
+          <Declaration/>
         </>
       );
     default:
